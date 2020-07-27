@@ -47,28 +47,28 @@ export default class GraphGenerator {
         this.nodes[link.target] ||
         (this.nodes[link.target] = { name: link.target })
     })
-    console.log(this.nodes)
+    // console.log(this.nodes)
   }
 
   initView() {
     // Per-type markers, as they don't inherit styles.
-    this.svgNode
-      .append('defs')
-      .selectAll('marker')
-      .data(['suit', 'licensing', 'resolved'])
-      .enter()
-      .append('marker')
-      .attr('id', function(d) {
-        return d
-      })
-      .attr('viewBox', '0 -5 10 10')
-      .attr('refX', 22)
-      .attr('refY', -1.5)
-      .attr('markerWidth', 6)
-      .attr('markerHeight', 6)
-      .attr('orient', 'auto')
-      .append('path')
-      .attr('d', 'M0,-5L10,0L0,5')
+    // this.svgNode
+    //   .append('defs')
+    //   .selectAll('marker')
+    //   .data(['suit', 'licensing', 'resolved'])
+    //   .enter()
+    //   .append('marker')
+    //   .attr('id', function(d) {
+    //     return d
+    //   })
+    //   .attr('viewBox', '0 -5 10 10')
+    //   .attr('refX', 22)
+    //   .attr('refY', -1.5)
+    //   .attr('markerWidth', 6)
+    //   .attr('markerHeight', 6)
+    //   .attr('orient', 'auto')
+    //   .append('path')
+    //   .attr('d', 'M0,-5L10,0L0,5')
 
     this.path = this.svgNode
       .append('g')
